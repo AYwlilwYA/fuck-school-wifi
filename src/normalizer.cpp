@@ -16,6 +16,9 @@
  *   normalizer.exe --check              环境自检，不开驱动
  *   normalizer.exe --stop | --status    停止 / 查看运行状态
  *   normalizer.exe --selftest           纯逻辑自检，不碰驱动
+ *
+ * 许可：GPL-3.0（仓库根 LICENSE，Copyright (C) 2026 AYwlilwYA）
+ * 依赖 WinDivert 1.3.0（LGPLv3，运行时动态加载，许可证见 LICENSES/WinDivert-LGPLv3.txt）
  */
 
 #define WIN32_LEAN_AND_MEAN

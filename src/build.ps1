@@ -1,5 +1,6 @@
 # build.ps1 -- build normalizer.exe with MSVC (VS18 Community), output to D:\hotspot-ttl\bin
 # Pure ASCII on purpose.
+# License: GPL-3.0 (repo root LICENSE); Copyright (C) 2026 AYwlilwYA
 $ErrorActionPreference = 'Stop'
 $VCVARS = 'D:\Program Files\Microsoft Visual Studio\18\Community\VC\Auxiliary\Build\vcvars64.bat'
 $SRC = 'F:\hotspot-ttl\src'

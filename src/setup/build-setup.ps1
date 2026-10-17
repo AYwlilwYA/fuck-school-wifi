@@ -1,5 +1,6 @@
 # build-setup.ps1 -- build hotspot-ttl-setup.exe (self-contained installer).
 # Embeds: normalizer.exe + WinDivert64.dll + WinDivert64.sys + task XML template.
+# License: GPL-3.0 (repo root LICENSE); Copyright (C) 2026 AYwlilwYA
 # Pure ASCII on purpose (PS 5.1 + GBK console).
 
 $ErrorActionPreference = 'Stop'
@@ -38,9 +39,16 @@ $uninstallCmd = Join-Path $dist 'uninstall.cmd'
 Set-Content -Path $uninstallCmd -Encoding ASCII -Value "@echo off`r`n`"%~dp0hotspot-ttl-setup.exe`" /uninstall`r`n pause`r`n"
 Copy-Item (Join-Path $src 'README-dist.txt') (Join-Path $dist 'README.txt') -Force
 
-# portable zip (setup + launchers + readme)
+# license files ride along with the binary distribution (GPL-3.0 + WinDivert LGPLv3)
+$repoRoot = Join-Path $src '..\..'
+Copy-Item (Join-Path $repoRoot 'LICENSE') (Join-Path $dist 'LICENSE.txt') -Force
+$licDir = Join-Path $dist 'LICENSES'
+New-Item -ItemType Directory -Force -Path $licDir | Out-Null
+Copy-Item (Join-Path $repoRoot 'LICENSES\WinDivert-LGPLv3.txt') $licDir -Force
+
+# portable zip (setup + launchers + readme + licenses)
 $zip = Join-Path $dist 'hotspot-ttl-normalizer-portable.zip'
-Compress-Archive -Path $out, $installCmd, $uninstallCmd, (Join-Path $dist 'README.txt') -DestinationPath $zip -Force
+Compress-Archive -Path $out, $installCmd, $uninstallCmd, (Join-Path $dist 'README.txt'), (Join-Path $dist 'LICENSE.txt'), $licDir -DestinationPath $zip -Force
 
 Get-Item $out | Format-List FullName, Length, LastWriteTime
 Get-ChildItem $dist -File | Format-Table Name, Length, LastWriteTime -AutoSize

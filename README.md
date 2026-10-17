@@ -85,8 +85,8 @@ hotspot-ttl-setup.exe [/dir <路径>] [/ttl <1..255>] [/no-autostart] [/uninstal
 
 ## 许可
 
-- WinDivert 组件（驱动 + 头文件）遵循其自有许可（LGPLv3，见 `windivert.h` 文件头）
-- 本仓库其余代码为个人自用项目，公开仅供学习参考
+- 本项目（normalizer、安装器等）采用 **GPL-3.0**，Copyright (C) 2026 AYwlilwYA，全文见 [LICENSE](LICENSE)。
+- 本项目包含并以运行时动态加载（`LoadLibrary`）方式使用 [WinDivert](https://github.com/basil00/WinDivert) 1.3.0（`WinDivert64.dll` / `WinDivert64.sys`），版权归 basil00 所有，按 **LGPLv3** 使用，许可证全文见 [LICENSES/WinDivert-LGPLv3.txt](LICENSES/WinDivert-LGPLv3.txt)；DLL 与程序同目录放置，可自行替换为修改后的兼容版本。
 
 ## 免责声明
 

@@ -1,5 +1,7 @@
 // hotspot-ttl-setup -- self-contained installer/uninstaller for the TTL normalizer.
 // C# 5 compatible (Framework csc). UTF-8 source, compiled with /codepage:65001.
+// License: GPL-3.0 (repo root LICENSE); Copyright (C) 2026 AYwlilwYA
+// Uses WinDivert 1.3.0 (LGPLv3) at runtime; license text in LICENSES\WinDivert-LGPLv3.txt
 using System;
 using System.Diagnostics;
 using System.IO;

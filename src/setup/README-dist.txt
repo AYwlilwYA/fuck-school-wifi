@@ -35,6 +35,12 @@ hotspot-ttl 归一化器 (TTL Normalizer) 安装包
   卸载动作: 停止进程 → 删除计划任务 → 清理 WinDivert 驱动服务 → 程序文件进回收站。
   日志 (logs) 与文档 (doc) 保留。
 
+许可
+----
+  本软件采用 GPL-3.0（许可证全文见随包 LICENSE.txt）。
+  包含并动态加载 WinDivert 1.3.0 (LGPLv3, 版权 basil00,
+  https://github.com/basil00/WinDivert)，其许可证全文见 LICENSES\WinDivert-LGPLv3.txt。
+
 正常运行的标志
 --------------
   D:\hotspot-ttl\logs\ 下最新的 ttl_normalize_*.log 里有:
