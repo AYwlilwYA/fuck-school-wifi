@@ -41,6 +41,8 @@ src/
 
 ## 构建
 
+不想自己编译：直接下载 [Releases](https://github.com/AYwlilwYA/fuck-school-wifi/releases) 里的预编译安装包（内嵌驱动，双击即装）。
+
 需要：Windows 10/11 x64、Visual Studio（MSVC）、管理员 PowerShell。
 
 WinDivert 运行库（`WinDivert64.dll` / `WinDivert64.sys`，1.3.0）从官方 WinDivert 1.3.0
