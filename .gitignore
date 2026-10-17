@@ -1,0 +1,19 @@
+# 本仓库只收源码：以下为构建产物 / 运行数据
+bin/
+dist/
+logs/
+*.log
+*.tsv
+observe-*.txt
+
+# 编译中间产物
+*.obj
+*.exe
+*.dll
+*.sys
+*.pdb
+*.ilk
+
+# 编辑器
+.vs/
+*.user
